@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-5 col-md-offset-4">
+    <form ng-submit="searchSeatGeek()">
+      <input class="form-control" ng-model="queryData">
+      <input type="submit" class="form-control btn btn-success">
+    </form>
+  </div>
+</div>
+<div class="row" ng-repeat="event in events">
+  <div class="col-md-8 col-md-offset-2">
+    <h1>Event: {{event.title}}</h1>
+    <h3>Date: {{event.datetime_local}}</h3>
+    <h3>Location: {{event.venue.display_location}}</h3>
+    <h3>Venue: {{event.venue.name}}</h3>
+    <a href="/{{event.id}}">More Info</a>
+  </div>
+</div>
