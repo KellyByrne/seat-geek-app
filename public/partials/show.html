@@ -1,37 +1,38 @@
-<div class="row">
-  <div class="col-md-6 col-md-offset-3 col-xs-12 info-box text-center">
-    <h1>{{theEvent.title}}</h1>
-    <h3>{{theEvent.datetime_local | date: "yyyy MMMM d 'at' h:mma"}}</h3>
-    <h3>{{theEvent.venue.name}}</h3>
-    <p>located at</p>
-    <h3>{{theEvent.venue.address}}</h3>
-    <h3>{{theEvent.venue.display_location}}</h3>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 col-xs-12 info-box text-center">
+      <h1>{{theEvent.title}}</h1>
+      <h3>{{theEvent.datetime_local | date: "yyyy MMMM d 'at' h:mma"}}</h3>
+      <h3>{{theEvent.venue.name}}</h3>
+      <p>located at</p>
+      <h3>{{theEvent.venue.address}}</h3>
+      <h3>{{theEvent.venue.display_location}}</h3>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-md-4 col-md-offset-4 col-xs-12 info-box text-center">
-    <h2>Tickets</h2>
-    <h4>Average Price: {{theEvent.stats.average_price | currency}}</h4>
-    <h4>High Price: {{theEvent.stats.highest_price | currency}}</h4>
-    <h4>Low Price: {{theEvent.stats.lowest_price | currency}}</h4>
-    <h4>Tickets Available: {{theEvent.stats.listing_count}}</h4>
-    <a href="{{theEvent.url}}">
-      <button class="btn btn-info">Click Here To Buy Tickets</button>
-    </a>
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4 col-xs-12 info-box text-center">
+      <h2>Tickets</h2>
+      <h4>Average Price: {{theEvent.stats.average_price | currency}}</h4>
+      <h4>High Price: {{theEvent.stats.highest_price | currency}}</h4>
+      <h4>Low Price: {{theEvent.stats.lowest_price | currency}}</h4>
+      <h4>Tickets Available: {{theEvent.stats.listing_count}}</h4>
+      <a href="{{theEvent.url}}">
+        <button class="btn btn-info">Click Here To Buy Tickets</button>
+      </a>
+    </div>
   </div>
-</div>
-<div class="row" ng-show="performersExist">
-  <div class="col-md-4 col-md-offset-4 col-xs-12 info-box text-center">
-    <h1>Performers</h1>
+  <div class="row" ng-show="performersExist">
+    <div class="col-md-4 col-md-offset-4 col-xs-12 info-box text-center">
+      <h1>Performers</h1>
+    </div>
+    <div class="col-md-4 col-md-offset-1 col-xs-12 perform-box text-center" ng-repeat="performer in performers">
+      <h2>{{performer.name}}</h2>
+      <img ng-src="{{performer.image}}" >
+    </div>
   </div>
-  <div class="col-md-4 col-md-offset-1 col-xs-12 perform-box text-center" ng-repeat="performer in performers">
-    <h2>{{performer.name}}</h2>
-    <img ng-src="{{performer.image}}" >
-  </div>
-</div>
- <div class="col-md-2 col-md-offset-5 col-xs-6 search text-center">
+  <div class="col-md-3 col-md-offset-4 col-xs-12 search text-center">
     <a href="/">
-      <button class="btn btn-info">New Search</button>
+      <button class="btn btn-info form-control">New Search</button>
     </a>
   </div>
-
+</div>
