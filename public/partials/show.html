@@ -14,7 +14,14 @@
     <h4>Average Price: {{theEvent.stats.average_price | currency}}</h4>
     <h4>High Price: {{theEvent.stats.highest_price | currency}}</h4>
     <h4>Low Price: {{theEvent.stats.lowest_price | currency}}</h4>
-    <a href="{{theEvent.url}}">Click Here To Buy Tickets</a>
+    <a href="{{theEvent.url}}">
+      <button class="btn btn-info">Click Here To Buy Tickets</button>
+    </a>
   </div>
 </div>
+ <div class="col-md-2 col-md-offset-5 search">
+    <a href="/">
+      <button class="btn btn-info">New Search</button>
+    </a>
+  </div>
 
