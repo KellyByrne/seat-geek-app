@@ -17,9 +17,13 @@
 <div class="row" ng-repeat="event in events">
   <div class="col-md-8 col-md-offset-2 info-box text-center">
     <h1>{{event.title}}</h1>
-    <h3>Date: {{event.datetime_local | date: 'yyyy MMMM d'}}</h3>
-    <h3>Location: {{event.venue.display_location}}</h3>
-    <h3>Venue: {{event.venue.name}}</h3>
-    <a href="/{{event.id}}">More Info</a>
+    <p>on</p>
+    <h4>{{event.datetime_local | date: "yyyy MMMM d 'at' h:mma"}}</h3>
+    <p>in</p>
+    <h3>{{event.venue.display_location}}</h3>
+    <p>at the</p>
+    <h3> {{event.venue.name}}</h3>
+    <br>
+    <a href="/{{event.id}}">Click Here for Event Info</a>
   </div>
 </div>

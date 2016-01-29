@@ -11,14 +11,17 @@ body {
   font-size: 70px; }
 
 .query-box {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.65);
   margin-top: 50px;
   padding-top: 85px;
   height: 250px; }
 
 .info-box {
   background-color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  padding-bottom: 20px; }
+  .info-box h3 {
+    margin: 5px; }
 
 .space {
   height: 100px; }

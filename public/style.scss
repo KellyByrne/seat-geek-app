@@ -14,7 +14,7 @@ body {
 }
 
 .query-box {
-  background-color: rgba(255,255,255, 0.5);
+  background-color: rgba(255,255,255, .65);
   margin-top: 50px;
   padding-top: 85px;
   height: 250px;
@@ -23,7 +23,12 @@ body {
 .info-box {
   background-color: rgba(255,255,255, .9);
   margin-bottom: 50px;
+  padding-bottom: 20px;
+  h3 {
+    margin: 5px;
+  }
 }
+
 
 .space {
   height: 100px
