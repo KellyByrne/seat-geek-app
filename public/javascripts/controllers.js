@@ -3,6 +3,8 @@ app.controller("SearchCtrl", ['$scope', '$http', function($scope, $http) {
     $http.get('https://api.seatgeek.com/2/events?q='+ $scope.queryData)
     .then(function(data){
        $scope.events = data.data.events;
+       console.log($scope.events)
+       $scope.queryData = "";
     })
   }
 }])

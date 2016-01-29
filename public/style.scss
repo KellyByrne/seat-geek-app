@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=News+Cycle);
+
+body {
+   background: url("http://www.cengagebrain.com/blog/wp-content/uploads/2012/09/fun.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover; 
+  -moz-background-size: cover; 
+  -o-background-size: cover; 
+  background-size: cover; 
+  font-family: 'News Cycle';
+}
+
+.title h1 {
+  font-size: 70px;
+}
+
+.query-box {
+  background-color: rgba(255,255,255, 0.5);
+  margin-top: 50px;
+  padding-top: 85px;
+  height: 250px;
+}
+
+.info-box {
+  background-color: rgba(255,255,255, .9);
+  margin-bottom: 50px;
+}
+
+.space {
+  height: 100px
+}
