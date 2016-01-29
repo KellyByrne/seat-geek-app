@@ -1,9 +1,16 @@
 app.controller("SearchCtrl", ['$scope', '$http', function($scope, $http) {
+  $scope.zeroResults = false;
   $scope.searchSeatGeek = function() {
     $http.get('https://api.seatgeek.com/2/events?q='+ $scope.queryData)
     .then(function(data){
        $scope.events = data.data.events;
-       console.log($scope.events)
+
+       if($scope.events.length > 0){
+        $scope.zeroResults = false;
+       } else if($scope.events.length === 0){
+        $scope.zeroResults = true;
+       }
+
        $scope.queryData = "";
     })
   }
